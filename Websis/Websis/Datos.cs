@@ -10,6 +10,7 @@ namespace Websis
     {
         string nombreDoc;
         string nombreCarr;
+        private List<Docente> listaDocentes = new List<Docente>();
 
         public Datos(string nombreDoc, string nombreCarr)
         {

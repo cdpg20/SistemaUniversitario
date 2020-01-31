@@ -16,6 +16,11 @@ namespace Websis
             this.nombreCarr = nombreCarr;
         }
 
+        public string getNombreCarrera()
+        {
+            return nombreCarr;
+        }
+
         public void registrarCarr(Carrera nombreCarr)
         {
             listaCarerra.Add(nombreCarr);
@@ -26,7 +31,7 @@ namespace Websis
         {
             foreach (var nombrecarrera in listaCarerra)
             {
-                Console.WriteLine(nombrecarrera);
+                Console.WriteLine(nombrecarrera.getNombreCarrera());
             }
         }
     }
