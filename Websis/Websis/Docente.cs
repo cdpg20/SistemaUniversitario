@@ -8,29 +8,28 @@ namespace Websis
 {
     public class Docente
     {
-        string nombreDoc;
-        private List<Docente> listaDocentes = new List<Docente>();
+        string matDoc;
+        private List<Docente> listaMateriasDoc = new List<Docente>();
 
-        public Docente(string nombreDoc)
+        public Docente(string matDoc)
         {
-            this.nombreDoc = nombreDoc;
+            this.matDoc = matDoc;
         }
 
-        public string getNombreDoc()
+        public string getMateriaDoc()
         {
-            return nombreDoc;
+            return matDoc;
         }
 
-        public void registrarDoc(Docente nombreDoc)
+        public void anadirMatDoc(Docente MateriaDoc)
         {
-            listaDocentes.Add(nombreDoc);
+            listaMateriasDoc.Add(MateriaDoc);
         }
-
-        public void getImprimirDocentes()
+        public void getImprimirMateriaDocente()
         {
-            foreach (var nombredocente in listaDocentes)
+            foreach (var materiaDocente in listaMateriasDoc)
             {
-                Console.WriteLine(nombredocente.getNombreDoc());
+                Console.WriteLine(materiaDocente.getMateriaDoc());
             }
         }
     }
