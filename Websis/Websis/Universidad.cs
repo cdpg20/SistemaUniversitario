@@ -8,71 +8,29 @@ namespace Websis
 {
     public class Universidad
     {
-        string nombreEst;
-        string nombreDoc;
-        string nombreCarr;
-        private List<Universidad> listaCarrera = new List<Universidad>();
-        private List<Universidad> listaEstudiante = new List<Universidad>();
-        private List<Universidad> listaDocentes = new List<Universidad>();
+        string nombreUniversidad;
+        private List<Carrera> listaCarreras = new List<Carrera>();
 
-        public Universidad(string nombreEst, string nombreDoc, string nombreCarr)
+        public Universidad( string nombreUniversidad)
         {
-            this.nombreEst = nombreEst;
-            this.nombreDoc = nombreDoc;
-            this.nombreCarr = nombreCarr;
+            this.nombreUniversidad = nombreUniversidad;
         }
 
-        public string getNombreEst()
+        public String getNombre()
         {
-            return nombreEst;
+            return nombreUniversidad;
         }
 
-        public string getNombreDoc()
+        public void agregarCarrera(Carrera nombreCarr)
         {
-            return nombreDoc;
+            listaCarreras.Add(nombreCarr);
         }
 
-        public string getNombreCarr()
+        public void getImprimirCarreras()
         {
-            return nombreCarr;
-        }
-
-        public void registrarEst(Universidad nombreEst)
-        {
-            listaEstudiante.Add(nombreEst);
-        }
-
-        public void getImprimirEstudiantes()
-        {
-            foreach (var nombreEstudiante in listaEstudiante)
+            foreach (var nombreCarrera in listaCarreras)
             {
-                Console.WriteLine(nombreEstudiante.getNombreEst());
-            }
-        }
-
-        public void registrarDoc(Universidad nombreDoc)
-        {
-            listaDocentes.Add(nombreDoc);
-        }
-
-        public void getImprimirDocentes()
-        {
-            foreach (var nombredocente in listaDocentes)
-            {
-                Console.WriteLine(nombredocente.getNombreDoc());
-            }
-        }
-
-        public void registrarCarr(Universidad nombreCarr)
-        {
-            listaEstudiante.Add(nombreCarr);
-        }
-
-        public void getImprimirCarrera()
-        {
-            foreach (var nombreCarrera in listaCarrera)
-            {
-                Console.WriteLine(nombreCarrera.getNombreCarr());
+                Console.WriteLine(nombreCarrera.getNombre());
             }
         }
 

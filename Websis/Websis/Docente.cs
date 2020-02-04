@@ -6,30 +6,61 @@ using System.Threading.Tasks;
 
 namespace Websis
 {
-    public class Docente
+    public class Docente : Persona
     {
-        string matDoc;
-        private List<Docente> listaMateriasDoc = new List<Docente>();
+        private string codigoDocente;
+        private List<Materia> listaMateriasDoc = new List<Materia>();
 
-        public Docente(string matDoc)
+        public Docente(string nombre)
         {
-            this.matDoc = matDoc;
+            base.Nombre = nombre;
         }
 
-        public string getMateriaDoc()
+        public Docente(string nombre, string apellido, DateTime fechaNacimiento, int ci, char s)
         {
-            return matDoc;
+            base.Nombre = nombre;
+            base.Apellido = apellido;
+            base.FechaNacimento = fechaNacimiento;
+            base.CI = ci;
+            this.codigoDocente = fechaNacimiento.Year.ToString() + fechaNacimiento.Month.ToString() + ci;
+            base.S = s;
         }
 
-        public void anadirMatDoc(Docente MateriaDoc)
+        public List<Materia> getMateriasDocente()
         {
-            listaMateriasDoc.Add(MateriaDoc);
+            return listaMateriasDoc;
         }
+
+        public string getNombreDocente()
+        {
+            return base.Nombre;
+        }
+
+        public string getApellidoDocente()
+        {
+            return base.Apellido;
+        }
+
+        public string getNombreCompletoDocente()
+        {
+            return base.Nombre + base.Apellido;
+        }
+
+        public string getCodigoDocente()
+        {
+            return codigoDocente;
+        }
+
+        public void agregarMateriaDoc(Materia materia)
+        {
+            listaMateriasDoc.Add(materia);
+        }
+
         public void getImprimirMateriaDocente()
         {
             foreach (var materiaDocente in listaMateriasDoc)
             {
-                Console.WriteLine(materiaDocente.getMateriaDoc());
+                Console.WriteLine(materiaDocente.getNombre());
             }
         }
     }

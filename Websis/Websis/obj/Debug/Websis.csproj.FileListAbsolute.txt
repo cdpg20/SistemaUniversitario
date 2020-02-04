@@ -7,6 +7,5 @@ C:\Users\cesar\Desktop\WEBSIS\Websis\Websis\obj\Debug\Websis.pdb
 D:\SistemaUniversitario\Websis\Websis\bin\Debug\Websis.exe.config
 D:\SistemaUniversitario\Websis\Websis\bin\Debug\Websis.exe
 D:\SistemaUniversitario\Websis\Websis\bin\Debug\Websis.pdb
-D:\SistemaUniversitario\Websis\Websis\obj\Debug\Websis.csprojAssemblyReference.cache
 D:\SistemaUniversitario\Websis\Websis\obj\Debug\Websis.exe
 D:\SistemaUniversitario\Websis\Websis\obj\Debug\Websis.pdb

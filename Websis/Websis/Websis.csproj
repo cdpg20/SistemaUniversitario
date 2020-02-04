@@ -47,6 +47,9 @@
     <Compile Include="Docente.cs" />
     <Compile Include="Estudiante.cs" />
     <Compile Include="Materias.cs" />
+    <Compile Include="MenuDocente.cs" />
+    <Compile Include="MenuEstudiante.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Universidad.cs" />

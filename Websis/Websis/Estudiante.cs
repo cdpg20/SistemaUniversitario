@@ -6,30 +6,60 @@ using System.Threading.Tasks;
 
 namespace Websis
 {
-    public class Estudiante
+    public class Estudiante : Persona
     {
-        string matEst;
-        private List<Estudiante> listaMateriasEst = new List<Estudiante>();
+        string codigoEstudiante;
+        private List<Materia> listaMateriasEst = new List<Materia>();
 
-        public Estudiante(string matEst)
+        public Estudiante(string nombre)
         {
-            this.matEst = matEst;
+            base.Nombre = nombre;
         }
 
-        public string getMateriaEst()
+        public Estudiante(string nombre, string apellido, int ci, DateTime fechaNacimiento, char s)
         {
-            return matEst;
+            base.Nombre = nombre;
+            base.Apellido = apellido;
+            base.CI = ci;
+            base.FechaNacimento = fechaNacimiento;
+            base.S = s;
+            codigoEstudiante = fechaNacimiento.Year.ToString() + fechaNacimiento.Month.ToString() + ci;
         }
 
-        public void anadirMatEst(Estudiante MateriaEst)
+        public List<Materia> getMateriaEstudiantes()
         {
-            listaMateriasEst.Add(MateriaEst);
+            return listaMateriasEst;
         }
+
+        public string getCodigoEstudiante()
+        {
+            return codigoEstudiante;
+        }
+
+        public string getNombreEstudiante()
+        {
+            return base.Nombre;
+        }
+        public string getApellidoEstudiante()
+        {
+            return base.Apellido;
+        }
+
+        public string getNombreCompletoEstudiante()
+        {
+            return base.Nombre + base.Apellido;
+        }
+
+        public void anadirMatEst(Materia materia)
+        {
+            listaMateriasEst.Add(materia);
+        }
+
         public void getImprimirMateriaEstudiante()
         {
             foreach (var materiaEstudiante in listaMateriasEst)
             {
-                Console.WriteLine(materiaEstudiante.getMateriaEst());
+                Console.WriteLine(materiaEstudiante.getNombre());
             }
         }
     }
